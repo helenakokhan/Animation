@@ -1,0 +1,93 @@
+body {
+    padding: 10px;
+    background-color: moccasin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*solid*/
+.solid {
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+    stroke-dashoffset: 500;
+    stroke-dasharray: 500;
+    animation: render 2s ease-in-out infinite;
+}
+
+@keyframes render {
+    0% {
+        stroke-dashoffset: 500;
+        stroke: black;
+        fill: blue;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        stroke: blueviolet;
+        fill: cadetblue;
+
+    }
+    100% {
+        stroke-dashoffset: 1000;
+        stroke: black;
+        fill: blue;
+    }
+}
+
+/*solid*/
+
+/*main*/
+.main {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*main*/
+
+/*rect*/
+.rect {
+    stroke-linejoin: round;
+    stroke-dasharray: 80;
+    animation: rects 1s linear infinite;
+}
+
+@keyframes rects {
+    100% {
+        stroke-dashoffset: 160;
+    }
+}
+
+/*rect*/
+
+/*ellipse*/
+ellipse {
+    animation: ellipse 3s linear infinite;
+}
+
+@keyframes ellipse {
+    0% {
+        stroke: black;
+        fill: red;
+    }
+    50% {
+        stroke: #E4EB13;
+        fill: #CD3E39;
+    }
+    100% {
+        stroke: #13EBE8;
+        fill: #A613EB;
+    }
+}
+
+/*ellipse*/
+
+
+
